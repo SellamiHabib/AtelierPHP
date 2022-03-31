@@ -6,7 +6,7 @@
 </head>
 <body>
 <link rel="stylesheet" href="style.css">
-<form action="recap.php" method="post">
+<form action="recap.php" method="post" enctype="multipart/form-data">
     <div class="inputBox">
         <label for="nom">Nom : </label>
         <input id="nom" type="text" name="nom">
@@ -43,6 +43,10 @@
         <label for="Salade"> Salade</label>
         <input id="Salade" type="checkbox" name="ingredients" value="Salade" >
 
+    </div>
+    <div class="inputBox">
+        <label for="CIN">Uploader votre CIN : </label>
+        <input id="CIN" name="CIN" type="file">
     </div>
     <div class="inputBox">
         <input type="submit" value="Submit">
