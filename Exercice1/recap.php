@@ -9,14 +9,13 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body style="flex-direction: column">
+
 <?php
-
-
-
+$id = uniqid();
 $file_name_cmps = explode('.',$_FILES['CIN']['name']);
 $file_extension = strtolower(end($file_name_cmps));
 $target_dir = "./Uploads/";
-$target_file = $target_dir . "CIN" . '.'.$file_extension;
+$target_file = $target_dir . $id . '.'.$file_extension;
 $tempname = $_FILES['CIN']["tmp_name"];
 
 $prenom = htmlspecialchars($_POST['prenom']);
@@ -37,7 +36,7 @@ move_uploaded_file($tempname, $target_file);
 <b><?= $prix ?> DT</b>
 
 <h1>Votre CIN : </h1>
-<img src="Uploads/CIN.<?=$file_extension?>">
+<img src="Uploads/<?=$id . '.'. $file_extension?>">
 
 </body>
 </html>
