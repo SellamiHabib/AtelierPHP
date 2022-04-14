@@ -19,6 +19,7 @@ $notes = $_SESSION['notes'];
     <link rel="stylesheet" href="notes.css ">
 </head>
 <body>
+<a href="index.php" style="align-self: flex-start; margin: 36px" >Home page</a>
 <div class="notes">
     <?php foreach ($notes as $item) { ?>
 
@@ -31,6 +32,6 @@ $notes = $_SESSION['notes'];
 
     <?php } ?>
 </div>
-<a href="index.php">Home page</a>
+
 </body>
 </html>
